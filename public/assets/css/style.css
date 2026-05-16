@@ -1,0 +1,383 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+}
+
+/* Navbar */
+
+.navbar {
+    background: #111827;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.navbar span {
+    margin-left: 15px;
+    color: #facc15;
+    font-weight: bold;
+}
+
+/* General */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+button,
+.btn {
+    display: inline-block;
+    background: #f97316;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover,
+.btn:hover {
+    background: #ea580c;
+}
+
+/* Auth Pages */
+
+.auth-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fb923c, #f97316, #111827);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.glass-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.glass-card h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.glass-card input {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.glass-card input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.glass-card input:focus {
+    outline: none;
+    border-color: white;
+}
+
+.glass-card button {
+    width: 100%;
+}
+
+.auth-link {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.auth-link a {
+    color: white;
+    font-weight: bold;
+}
+
+/* Hero Section */
+
+.hero {
+    height: 60vh;
+    background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-overlay h1 {
+    font-size: 56px;
+    margin-bottom: 15px;
+}
+
+.hero-overlay p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+/* Section */
+
+.section-title {
+    margin: 45px 0 25px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+    margin: 0;
+}
+
+/* Categories */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.category-card {
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
+    height: 240px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.category-card:hover img {
+    transform: scale(1.08);
+}
+
+.category-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.8),
+        rgba(0,0,0,0.2)
+    );
+    display: flex;
+    align-items: flex-end;
+    padding: 22px;
+}
+
+.category-overlay h3 {
+    color: white;
+    font-size: 26px;
+    margin: 0;
+}
+
+/* Menu Page */
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
+    gap: 24px;
+    justify-content: center;
+}
+
+.food-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.food-card-content {
+    padding: 18px;
+}
+
+.food-card h3 {
+    margin-top: 0;
+    font-size: 32px;
+}
+
+.food-card p {
+    color: #666;
+    font-size: 15px;
+    min-height: 50px;
+}
+
+.food-card strong {
+    display: block;
+    margin: 15px 0;
+    font-size: 22px;
+}
+
+.food-card input[type="number"] {
+    width: 90px;
+    margin-bottom: 15px;
+}
+
+/* Admin Delete Button */
+
+.delete-btn {
+    background: #dc2626;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+/* Success Message */
+
+.alert-success {
+    background: #22c55e;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-overlay h1 {
+        font-size: 38px;
+    }
+
+    .hero-overlay p {
+        font-size: 18px;
+    }
+
+    .category-card {
+        height: 200px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+}
+/* Food Grid */
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 280px));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+/* Food Card */
+
+.food-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-6px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.food-card-content {
+    padding: 22px;
+}
+
+.food-card h3 {
+    font-size: 22px;
+}
+
+.food-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.food-card strong {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.food-card .btn {
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-size: 16px;
+}
